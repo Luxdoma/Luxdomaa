@@ -1,8 +1,9 @@
 /* style.css */
 
+/* Общие стили */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Arial', sans-serif; /* Заменить на 'Segoe UI', если нужно */
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
@@ -15,6 +16,15 @@ header {
   text-align: center;
 }
 
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+  margin-top: 50px;
+}
+
+/* Навигация */
 nav {
   background-color: #005599;
   display: flex;
@@ -33,27 +43,23 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Стили для секций */
 section {
   padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
 }
 
-h2 {
+/* Заголовки */
+h1, h2 {
   color: #003366;
+  text-align: center;
+  margin-top: 50px;
   border-bottom: 2px solid #ccc;
   padding-bottom: 10px;
-  margin-top: 50px;
 }
 
-footer {
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 30px 10px;
-  margin-top: 50px;
-}
-
+/* Кнопки */
 .button {
   background-color: #005599;
   color: white;
@@ -67,55 +73,21 @@ footer {
 .button:hover {
   background-color: #0077cc;
 }
-/* Общие стили */
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f5f5f5;
-  color: #333;
+
+/* Дополнительные стили */
+h2 {
+  color: #003366;
 }
 
-header, footer {
-  background: #1c1c1c;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-/* Навигация */
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  background: #2e2e2e;
-  padding: 15px 0;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Заголовки */
-h1, h2 {
-  color: #222;
-  text-align: center;
-  margin-top: 40px;
-}
-
-/* Разделы */
 section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
   background: white;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
 
-/* Кнопки */
 button {
   padding: 10px 25px;
   background: #007BFF;
