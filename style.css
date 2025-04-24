@@ -1,24 +1,15 @@
 /* Общие стили */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Arial', sans-serif; /* Используем один шрифт */
   background-color: #f9f9f9; /* Фон страницы */
   color: #333;
   line-height: 1.6;
 }
 
-/* Заголовки */
-h1, h2 {
-  color: #003366;
-  text-align: center;
-  margin-top: 40px;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 10px;
-}
-
 /* Header и footer */
 header, footer {
-  background-color: #003366; /* Цвет фона */
+  background-color: #003366; /* Цвет фона для header и footer */
   color: white;
   padding: 20px;
   text-align: center;
@@ -26,7 +17,7 @@ header, footer {
 
 /* Навигация */
 nav {
-  background-color: #005599; /* Цвет фона навигации */
+  background-color: #005599; /* Цвет фона для навигации */
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -43,41 +34,43 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Заголовки */
+h1, h2 {
+  color: #003366;
+  text-align: center;
+  margin-top: 40px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+}
+
 /* Секции */
 section {
   padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
-  background: white; /* Фон секций */
+  background: white;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Кнопки */
-.button {
-  background-color: #005599;
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.button:hover {
-  background-color: #0077cc;
-}
-
-/* Кнопки в других местах */
-button {
+.button, button {
   padding: 10px 25px;
-  background: #007BFF;
+  background: #007BFF; /* Основной цвет для кнопок */
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
 }
 
-button:hover {
-  background: #0056b3;
+.button:hover, button:hover {
+  background: #0056b3; /* Цвет при наведении */
+}
+
+.button {
+  background-color: #005599; /* Специальный цвет для кнопок с классом .button */
+}
+
+.button:hover {
+  background-color: #0077cc; /* Цвет при наведении для .button */
 }
