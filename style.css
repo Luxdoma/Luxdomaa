@@ -77,6 +77,28 @@ section {
     margin-bottom: 10px; /* Немного пространства между кнопками */
   }
 }
+nav {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Лёгкая тень для навигации */
+}
+
+.button {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Тень для кнопок */
+}
+
+.button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень при наведении */
+}
+header, footer {
+  background: linear-gradient(135deg, #003366, #005599); /* Градиент для заголовка и подвала */
+}
+
+button {
+  background: linear-gradient(45deg, #007BFF, #0056b3); /* Градиент для кнопок */
+}
+
+button:hover {
+  background: linear-gradient(45deg, #0056b3, #0077cc);
+}
 
 .button:hover, button:hover {
   background: #0056b3; /* Цвет при наведении */
@@ -88,4 +110,7 @@ section {
 
 .button:hover {
   background-color: #0077cc; /* Цвет при наведении для .button */
+}
+button, .button {
+  transition: background 0.3s ease; /* Плавное изменение фона при наведении */
 }
