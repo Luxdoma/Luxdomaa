@@ -62,6 +62,21 @@ section {
   border-radius: 8px;
   cursor: pointer;
 }
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Переход к вертикальной навигации на маленьких экранах */
+  }
+
+  section {
+    padding: 20px; /* Меньше отступов для мобильных */
+    max-width: 100%; /* Убираем ограничение по ширине */
+  }
+
+  .button, button {
+    width: 100%; /* Кнопки на всю ширину на мобильных */
+    margin-bottom: 10px; /* Немного пространства между кнопками */
+  }
+}
 
 .button:hover, button:hover {
   background: #0056b3; /* Цвет при наведении */
