@@ -1,27 +1,27 @@
-/* style.css */
-
 /* Общие стили */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif; /* Заменить на 'Segoe UI', если нужно */
+  font-family: 'Arial', sans-serif; /* Можешь заменить на 'Segoe UI' или оставить как есть */
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
 }
 
-header {
+/* Заголовки */
+h1, h2 {
+  color: #003366;
+  text-align: center;
+  margin-top: 40px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+}
+
+/* Header и footer */
+header, footer {
   background-color: #003366;
   color: white;
   padding: 20px;
   text-align: center;
-}
-
-footer {
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 30px 10px;
-  margin-top: 50px;
 }
 
 /* Навигация */
@@ -43,20 +43,14 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Стили для секций */
+/* Секции */
 section {
   padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
-}
-
-/* Заголовки */
-h1, h2 {
-  color: #003366;
-  text-align: center;
-  margin-top: 50px;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 10px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Кнопки */
@@ -74,20 +68,7 @@ h1, h2 {
   background-color: #0077cc;
 }
 
-/* Дополнительные стили */
-h2 {
-  color: #003366;
-}
-
-section {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-}
-
+/* Дополнительные стили для кнопок и секций */
 button {
   padding: 10px 25px;
   background: #007BFF;
