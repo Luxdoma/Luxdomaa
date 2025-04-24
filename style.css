@@ -67,3 +67,64 @@ footer {
 .button:hover {
   background-color: #0077cc;
 }
+/* Общие стили */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #333;
+}
+
+header, footer {
+  background: #1c1c1c;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Навигация */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  background: #2e2e2e;
+  padding: 15px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Заголовки */
+h1, h2 {
+  color: #222;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Разделы */
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* Кнопки */
+button {
+  padding: 10px 25px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
