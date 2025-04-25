@@ -1,15 +1,15 @@
 /* Общие стили */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif; /* Используем один шрифт */
-  background-color: #f9f9f9; /* Фон страницы */
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
 }
 
 /* Header и footer */
 header, footer {
-  background: linear-gradient(135deg, #003366, #005599); /* Градиент для заголовка и подвала */
+  background: linear-gradient(135deg, #003366, #005599);
   color: white;
   padding: 20px;
   text-align: center;
@@ -17,12 +17,12 @@ header, footer {
 
 /* Навигация */
 nav {
-  background-color: #005599; /* Цвет фона для навигации */
+  background-color: #005599;
   display: flex;
   justify-content: center;
   gap: 20px;
   padding: 15px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Лёгкая тень для навигации */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
@@ -57,32 +57,42 @@ section {
 /* Кнопки */
 button, .button {
   padding: 10px 25px;
-  background: linear-gradient(45deg, #007BFF, #0056b3); /* Градиент для кнопок */
+  background: linear-gradient(45deg, #007BFF, #0056b3);
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease, box-shadow 0.3s ease; /* Плавные изменения */
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover, .button:hover {
-  background: linear-gradient(45deg, #0056b3, #0077cc); /* Градиент при наведении */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень при наведении */
+  background: linear-gradient(45deg, #0056b3, #0077cc);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Контакты и ссылки */
+a {
+  color: #0056b3;
+}
+
+a:hover {
+  color: #003366;
+  text-decoration: underline;
 }
 
 /* Мобильная версия */
 @media screen and (max-width: 768px) {
   nav {
-    flex-direction: column; /* Переход к вертикальной навигации на маленьких экранах */
+    flex-direction: column;
   }
 
   section {
-    padding: 20px; /* Меньше отступов для мобильных */
-    max-width: 100%; /* Убираем ограничение по ширине */
+    padding: 20px;
+    max-width: 100%;
   }
 
   button, .button {
-    width: 100%; /* Кнопки на всю ширину на мобильных */
-    margin-bottom: 10px; /* Немного пространства между кнопками */
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
