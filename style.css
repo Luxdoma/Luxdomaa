@@ -5,6 +5,11 @@ body {
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
+  body {
+    background-image: url('images/homepage.jpg');
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 /* Header и footer */
