@@ -1,165 +1,90 @@
 <!DOCTYPE html>
 <html lang="ru">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LuxDoma</title>
-  <link rel="stylesheet" href="style.css">
-  <head>
-    <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #002B5B;
-      color: white;
-      padding: 20px 40px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 18px;
-      color: #cfd8dc;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 16px;
-    }
-
-    nav a:hover {
-      color: #f9f9f9;
-      text-decoration: underline;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    .section {
-      margin-bottom: 60px;
-    }
-
-    .section h2 {
-      font-size: 28px;
-      color: #002B5B;
-      margin-bottom: 20px;
-    }
-
-    .section p {
-      font-size: 18px;
-    }
-
-    footer {
-      background: #002B5B;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-    }
-
-    footer p {
-      margin: 10px 0;
-    }
-
-    footer a {
-      color: white;
-      text-decoration: none;
-    }
-  </style>
+  <title>Luxury Villas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+
+  <!-- Хедер -->
   <header>
-    <h1>Добро пожаловать в LuxDoma</h1>
-    <p>Ваш проводник в мире туризма, недвижимости и бизнеса</p>
+    <div class="logo">
+      <img src="images/Logo.jpg" alt="Логотип">
+    </div>
     <nav>
-      <ul>
-        <li><a href="#about">О нас</a></li>
-        <li><a href="#services">Наши услуги</a></li>
-        <li><a href="#contact">Контакты</a></li>
-      </ul>
+      <a href="#home">Главная</a>
+      <a href="#villas">Виллы</a>
+      <a href="#kitchens">Кухни</a>
+      <a href="#services">Услуги</a>
+      <a href="#contact">Контакты</a>
     </nav>
   </header>
 
-  <div class="container">
-    <!-- Этап 2: О нас -->
-    <section class="section" id="about">
-      <h2>О нас</h2>
-      <p>LuxDoma — это команда профессионалов, специализирующаяся на визовой поддержке, туризме, риелторских услугах
-        и продаже бизнеса. Мы помогаем клиентам реализовать их цели по всему миру.</p>
-    </section>
+  <!-- Главная секция -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Откройте Мир Роскоши</h1>
+      <p>Лучшие виллы и эксклюзивные кухни по всему миру</p>
+      <a href="#villas" class="button">Подробнее</a>
+    </div>
+  </section>
 
-    <!-- Этап 3: Услуги -->
-    <section class="section" id="services">
-      <h2>Наши услуги</h2>
-      <div class="services">
-        <div class="service">
-          <h3>Визовая поддержка</h3>
-          <p>Оформим визу быстро и без стресса. Работаем с десятками стран.</p>
-        </div>
-        <div class="service">
-          <h3>Туризм</h3>
-          <p>Индивидуальные туры, VIP-сервис, лучшие направления и впечатления.</p>
-        </div>
-        <div class="service">
-          <h3>Риелторские услуги</h3>
-          <p>Подбор и сопровождение сделок с недвижимостью — дом, квартира, коммерция.</p>
-        </div>
-        <div class="service">
-          <h3>Продажа бизнеса</h3>
-          <p>Конфиденциальная и быстрая продажа/покупка действующих бизнесов.</p>
-        </div>
+  <!-- Секция вилл -->
+  <section id="villas" class="gallery">
+    <h2>Наши виллы</h2>
+    <div class="gallery-grid">
+      <img src="images/villa1.jpg" alt="Вилла 1">
+      <img src="images/villa2.jpg" alt="Вилла 2">
+      <img src="images/villa3.jpg" alt="Вилла 3">
+    </div>
+  </section>
+
+  <!-- Секция кухонь -->
+  <section id="kitchens" class="kitchens">
+    <h2>Изысканные кухни</h2>
+    <div class="kitchen-grid">
+      <div class="kitchen-item">
+        <img src="images/kitchen1.jpg" alt="Кухня 1">
+        <h3>Кухня премиум класса</h3>
       </div>
-    </section>
+      <div class="kitchen-item">
+        <img src="images/kitchen2.jpg" alt="Кухня 2">
+        <h3>Индивидуальные решения</h3>
+      </div>
+    </div>
+  </section>
 
-    <!-- Этап 4: Контакты -->
-    <section class="section" id="contact">
-      <h2>Связаться с нами</h2>
-      <p>Мы всегда на связи. Пишите нам в Instagram:</p>
-      <p><a href="https://instagram.com/luxdoma2025" target="_blank">@luxdoma2025</a></p>
-    </section>
-  </div>
+  <!-- Услуги -->
+  <section id="services" class="services">
+    <h2>Наши услуги</h2>
+    <div class="service-cards">
+      <div class="service-card">
+        <img src="images/icon1.jpg" alt="Иконка 1">
+        <h3>Персональный подход</h3>
+        <p>Мы учитываем все ваши пожелания и создаём неповторимые интерьеры.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/icon2.jpg" alt="Иконка 2">
+        <h3>Поддержка 24/7</h3>
+        <p>Наши специалисты всегда готовы помочь вам на всех этапах проекта.</p>
+      </div>
+    </div>
+  </section>
 
-  <!-- Этап 5: Футер -->
+  <!-- Контакты -->
+  <section id="contact" class="contact">
+    <h2>Связаться с нами</h2>
+    <p>Готовы начать сотрудничество? Оставьте заявку!</p>
+    <a href="mailto:info@luxuryvillas.com" class="button">Написать письмо</a>
+  </section>
+
+  <!-- Футер -->
   <footer>
-    <p>&copy; 2025 LuxDoma. Все права защищены.</p>
-    <p>Наши соцсети:</p>
-    <p>
-      <a href="https://instagram.com/luxdoma2025" target="_blank">Instagram</a> |
-      <a href="https://facebook.com/luxdoma" target="_blank">Facebook</a> |
-      <a href="https://twitter.com/luxdoma" target="_blank">Twitter</a>
-    </p>
-    <p>Контактный номер: <a href="tel:+99364794443">+993 (64) 79-44-43</a></p>
-    <p>Email: <a href="mailto:haltravelk@gmail.com">haltravelk@gmail.com</a></p>
+    <p>&copy; 2025 Luxury Villas. Все права защищены.</p>
   </footer>
 
 </body>
-
 </html>
