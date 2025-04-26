@@ -1,209 +1,267 @@
-/* Общие стили */
-body {
+/* Сброс стилей */
+* {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #ffffff;
   color: #333;
-  background: #f4f4f4;
+  line-height: 1.6;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+/* Контейнер */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Хедер */
-header {
-  background: #003366;
-  color: white;
+/* Header */
+.header {
+  background-color: #fff;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 50px;
 }
 
-.logo img {
-  height: 60px;
+.logo {
+  width: 150px;
+  height: auto;
 }
 
-nav {
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  color: white;
+.nav a {
+  margin-left: 20px;
   text-decoration: none;
-  font-weight: bold;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.nav a:hover {
+  color: #c8a750;
 }
 
-/* Главная секция */
+/* Hero Section */
 .hero {
-  background: url('images/homepage1.jpg') no-repeat center center/cover;
-  height: 100vh;
+  background: url('images/hero-background.jpg') center/cover no-repeat;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   text-align: center;
-  color: white;
+  color: #fff;
+  position: relative;
 }
 
-.hero::after {
-  content: '';
+.hero::before {
+  content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.4);
-  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
-.hero-content h1 {
-  font-size: 3em;
+.hero h1 {
+  font-size: 48px;
   margin-bottom: 20px;
 }
 
-.hero-content p {
-  font-size: 1.5em;
+.hero p {
+  font-size: 20px;
   margin-bottom: 30px;
 }
 
-.button {
+.hero-button {
   display: inline-block;
-  padding: 10px 30px;
-  background: linear-gradient(45deg, #007BFF, #0056b3);
-  color: white;
+  padding: 12px 30px;
+  background-color: #c8a750;
+  color: #fff;
   border-radius: 30px;
   text-decoration: none;
-  transition: background 0.3s ease;
+  font-weight: 600;
+  transition: background 0.3s;
 }
 
-.button:hover {
-  background: linear-gradient(45deg, #0056b3, #007BFF);
+.hero-button:hover {
+  background-color: #a88c45;
 }
 
-/* Галерея вилл */
-.gallery {
-  padding: 60px 20px;
-  background: white;
+/* About Section */
+.about {
+  padding: 80px 0;
   text-align: center;
 }
 
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Gallery Sections */
+.gallery {
+  padding: 80px 0;
+}
+
 .gallery h2 {
+  text-align: center;
+  font-size: 36px;
   margin-bottom: 40px;
-  font-size: 2.5em;
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-/* Кухни */
-.kitchens {
-  padding: 60px 20px;
-  background: #eef2f7;
-  text-align: center;
-}
-
-.kitchen-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.kitchen-item {
-  flex: 1 1 300px;
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.kitchen-item:hover {
-  transform: translateY(-5px);
-}
-
-.kitchen-item h3 {
-  margin: 15px 0;
-}
-
-/* Услуги */
-.services {
-  padding: 60px 20px;
-  background: white;
-  text-align: center;
-}
-
-.service-cards {
-  display: flex;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
-  justify-content: center;
+}
+
+.gallery-grid figure {
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.3s;
+  background: #fafafa;
+}
+
+.gallery-grid figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.gallery-grid figure:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-grid figcaption {
+  text-align: center;
+  padding: 15px 10px;
+  font-weight: 500;
+  background: #fff;
+}
+
+/* Services Section */
+.services {
+  background-color: #f9f9f9;
+  padding: 80px 0;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
   margin-top: 40px;
 }
 
 .service-card {
-  background: #eef2f7;
+  background: #fff;
   padding: 30px;
-  border-radius: 10px;
-  flex: 1 1 250px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-  transition: box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
 }
 
 .service-card img {
-  height: 80px;
+  width: 60px;
   margin-bottom: 20px;
 }
 
-/* Контакты */
+.service-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: #666;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Contact Section */
 .contact {
-  padding: 60px 20px;
-  background: #003366;
-  color: white;
+  padding: 80px 0;
   text-align: center;
 }
 
-/* Футер */
-footer {
-  background: #002244;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-  }
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+}
 
-  nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
 
-  .kitchen-grid,
-  .service-cards {
-    flex-direction: column;
-  }
+.contact-form textarea {
+  min-height: 150px;
+}
+
+.button {
+  background-color: #c8a750;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background-color: #a88c45;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #aaa;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 14px;
 }
