@@ -1,321 +1,184 @@
-/* Сброс стилей */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* LuxDoma.css */
+
+/* Обнуление и базовая настройка */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #ffffff;
-  color: #333;
-  line-height: 1.6;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #222;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* Контейнер */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-/* Header */
-.header {
-  background-color: #fff;
-  padding: 20px 0;
-  border-bottom: 1px solid #eee;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Шапка */
+header {
+    background: #ffffff;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
 }
 
 .logo {
-  width: 150px;
-  height: auto;
+    display: flex;
+    align-items: center;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
+.logo img {
+    height: 50px;
+    margin-right: 10px;
 }
 
-.nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s ease;
+/* Навигация */
+nav a {
+    color: #222;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-.nav a:hover {
-  color: #c8a750;
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #0077cc;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
 }
 
-/* Hero Section */
-.hero {
-  background: url('images/hero-background.jpg') center/cover no-repeat;
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  position: relative;
+nav a:hover {
+    color: #0077cc;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 0;
+nav a:hover::after {
+    width: 100%;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 1;
+/* Основной контейнер */
+.container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
 }
 
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
+.container.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.hero p {
-  font-size: 20px;
-  margin-bottom: 30px;
+/* Заголовки */
+h1, h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
-.hero-button {
-  display: inline-block;
-  padding: 12px 30px;
-  background-color: #c8a750;
-  color: #fff;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s ease;
+h1 {
+    font-size: 42px;
+    color: #002244;
+    text-align: center;
 }
 
-.hero-button:hover {
-  background-color: #a88c45;
+h2 {
+    font-size: 32px;
+    color: #004488;
 }
 
-/* About Section */
-.about {
-  padding: 80px 20px;
-  text-align: center;
+/* Параграфы */
+p {
+    font-size: 18px;
 }
 
-.about h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+/* Секции */
+.intro, .services, .about, .villas {
+    margin-bottom: 80px;
 }
 
-.about p {
-  font-size: 18px;
-  max-width: 800px;
-  margin: 0 auto;
-  color: #666;
+/* Кнопка */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #0077cc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 20px;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
-/* Gallery Section */
-.gallery {
-  padding: 80px 20px;
+.btn:hover {
+    background-color: #005fa3;
+    transform: scale(1.05);
 }
 
-.gallery h2 {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 40px;
+/* Фото виллы */
+.villa-photo {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    margin-top: 30px;
+    transition: transform 0.4s ease;
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+.villa-photo:hover {
+    transform: scale(1.03);
 }
 
-.gallery-grid figure {
-  overflow: hidden;
-  border-radius: 15px;
-  background: #fafafa;
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #111;
+    color: #bbb;
+    font-size: 14px;
 }
 
-.gallery-grid figure img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.3s ease;
-}
+/* Адаптив для телефонов */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
 
-.gallery-grid figure:hover img {
-  transform: scale(1.05);
-}
+    nav {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-.gallery-grid figcaption {
-  text-align: center;
-  padding: 15px 10px;
-  font-weight: 500;
-  background: #fff;
-  font-size: 16px;
-}
+    nav a {
+        margin: 10px 10px 0 0;
+    }
 
-/* Visa & Business Section */
-.visa, .business {
-  padding: 80px 20px;
-  background-color: #f8f8f8;
-  text-align: center;
-}
+    h1 {
+        font-size: 34px;
+    }
 
-.visa h2, .business h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.visa p, .business p {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 18px;
-  line-height: 1.6;
-  color: #555;
-}
-
-/* Services Section */
-.services {
-  background-color: #f9f9f9;
-  padding: 80px 20px;
-}
-
-.services h2 {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 40px;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.service-card {
-  background: #fff;
-  padding: 30px;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.service-card i {
-  font-size: 40px;
-  color: #c8a750;
-  margin-bottom: 20px;
-}
-
-.service-card h3 {
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-.service-card p {
-  font-size: 16px;
-  color: #666;
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-}
-
-/* Contact Section */
-.contact {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.contact h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
-}
-
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  display: grid;
-  gap: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 16px;
-  resize: vertical;
-}
-
-.contact-form textarea {
-  min-height: 150px;
-}
-
-.button {
-  background-color: #c8a750;
-  color: #fff;
-  border: none;
-  padding: 15px 30px;
-  border-radius: 30px;
-  font-size: 18px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.button:hover {
-  background-color: #a88c45;
-}
-
-/* Footer */
-.footer {
-  background-color: #222;
-  color: #aaa;
-  padding: 30px 0;
-  text-align: center;
-  font-size: 14px;
-  margin-top: auto;
-}
-
-/* Дополнительные улучшения */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-a {
-  transition: color 0.3s ease, background 0.3s ease;
+    h2 {
+        font-size: 26px;
+    }
 }
