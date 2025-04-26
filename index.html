@@ -2,88 +2,119 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luxury Villas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Премиальные Виллы</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Хедер -->
-  <header>
-    <div class="logo">
-      <img src="images/Logo.jpg" alt="Логотип">
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <img src="images/Logo.jpg" alt="Логотип" class="logo">
+      <nav class="nav">
+        <a href="#home">Главная</a>
+        <a href="#about">О нас</a>
+        <a href="#villas">Виллы</a>
+        <a href="#kitchens">Кухни</a>
+        <a href="#services">Услуги</a>
+        <a href="#contact">Контакты</a>
+      </nav>
     </div>
-    <nav>
-      <a href="#home">Главная</a>
-      <a href="#villas">Виллы</a>
-      <a href="#kitchens">Кухни</a>
-      <a href="#services">Услуги</a>
-      <a href="#contact">Контакты</a>
-    </nav>
   </header>
 
-  <!-- Главная секция -->
+  <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="hero-content">
-      <h1>Откройте Мир Роскоши</h1>
-      <p>Лучшие виллы и эксклюзивные кухни по всему миру</p>
-      <a href="#villas" class="button">Подробнее</a>
+      <h1>Добро пожаловать в мир роскоши</h1>
+      <p>Эксклюзивные виллы для тех, кто ценит лучшее</p>
+      <a href="#villas" class="hero-button">Смотреть Виллы</a>
     </div>
   </section>
 
-  <!-- Секция вилл -->
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>О нас</h2>
+      <p>Мы создаём уникальные пространства, которые сочетают в себе комфорт, стиль и передовые технологии. Наши виллы — воплощение утонченности и безупречного вкуса.</p>
+    </div>
+  </section>
+
+  <!-- Villas Gallery -->
   <section id="villas" class="gallery">
-    <h2>Наши виллы</h2>
-    <div class="gallery-grid">
-      <img src="images/villa1.jpg" alt="Вилла 1">
-      <img src="images/villa2.jpg" alt="Вилла 2">
-      <img src="images/villa3.jpg" alt="Вилла 3">
-    </div>
-  </section>
-
-  <!-- Секция кухонь -->
-  <section id="kitchens" class="kitchens">
-    <h2>Изысканные кухни</h2>
-    <div class="kitchen-grid">
-      <div class="kitchen-item">
-        <img src="images/kitchen1.jpg" alt="Кухня 1">
-        <h3>Кухня премиум класса</h3>
-      </div>
-      <div class="kitchen-item">
-        <img src="images/kitchen2.jpg" alt="Кухня 2">
-        <h3>Индивидуальные решения</h3>
+    <div class="container">
+      <h2>Наши Виллы</h2>
+      <div class="gallery-grid">
+        <figure>
+          <img src="images/villa1.jpg" alt="Вилла 1">
+          <figcaption>Вилла на побережье</figcaption>
+        </figure>
+        <figure>
+          <img src="images/villa2.jpg" alt="Вилла 2">
+          <figcaption>Современная резиденция</figcaption>
+        </figure>
+        <figure>
+          <img src="images/villa3.jpg" alt="Вилла 3">
+          <figcaption>Роскошная усадьба</figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
-  <!-- Услуги -->
+  <!-- Kitchens Gallery -->
+  <section id="kitchens" class="gallery kitchens">
+    <div class="container">
+      <h2>Изысканные Кухни</h2>
+      <div class="gallery-grid">
+        <figure>
+          <img src="images/kitchen1.jpg" alt="Кухня 1">
+          <figcaption>Стильная кухня</figcaption>
+        </figure>
+        <figure>
+          <img src="images/kitchen2.jpg" alt="Кухня 2">
+          <figcaption>Минимализм и удобство</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
   <section id="services" class="services">
-    <h2>Наши услуги</h2>
-    <div class="service-cards">
-      <div class="service-card">
-        <img src="images/icon1.jpg" alt="Иконка 1">
-        <h3>Персональный подход</h3>
-        <p>Мы учитываем все ваши пожелания и создаём неповторимые интерьеры.</p>
-      </div>
-      <div class="service-card">
-        <img src="images/icon2.jpg" alt="Иконка 2">
-        <h3>Поддержка 24/7</h3>
-        <p>Наши специалисты всегда готовы помочь вам на всех этапах проекта.</p>
+    <div class="container">
+      <h2>Наши Услуги</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="images/icon1.jpg" alt="Иконка 1">
+          <h3>Персональный Дизайн</h3>
+          <p>Мы подберем уникальный интерьер для каждого клиента, учитывая все его пожелания и предпочтения.</p>
+        </div>
+        <div class="service-card">
+          <img src="images/icon2.jpg" alt="Иконка 2">
+          <h3>Управление Недвижимостью</h3>
+          <p>Полный сервис: от аренды до ухода за вашей виллой — чтобы вы наслаждались каждой минутой.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Контакты -->
+  <!-- Contact Section -->
   <section id="contact" class="contact">
-    <h2>Связаться с нами</h2>
-    <p>Готовы начать сотрудничество? Оставьте заявку!</p>
-    <a href="mailto:info@luxuryvillas.com" class="button">Написать письмо</a>
+    <div class="container">
+      <h2>Связаться с нами</h2>
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="email" name="email" placeholder="Ваш Email" required>
+        <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+        <button type="submit" class="button">Отправить</button>
+      </form>
+    </div>
   </section>
 
-  <!-- Футер -->
-  <footer>
-    <p>&copy; 2025 Luxury Villas. Все права защищены.</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Премиальные Виллы. Все права защищены.</p>
+    </div>
   </footer>
 
 </body>
