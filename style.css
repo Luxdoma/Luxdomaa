@@ -1,31 +1,27 @@
 /* Общие стили */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-
-  body {
   font-family: 'Inter', sans-serif;
-  background-image: url('images/Homepage.jpg'); /* меняй на любую из своих */
+  background-image: url('images/Homepage.jpg'); /* твоя обложка */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
   color: white;
-  }
-  body::after {
+  line-height: 1.6;
+  position: relative;
+}
+
+body::after {
   content: '';
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* прозрачность 40% */
+  background: rgba(0, 0, 0, 0.4); /* затемнение */
   z-index: -1;
-  }
 }
 
-/* Header и footer */
+/* Header и Footer */
 header, footer {
   background: linear-gradient(135deg, #003366, #005599);
   color: white;
@@ -55,10 +51,11 @@ nav a:hover {
 
 /* Заголовки */
 h1, h2 {
-  color: #003366;
+  color: #ffffff;
   text-align: center;
   margin-top: 40px;
-  border-bottom: 2px solid #ccc;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  border-bottom: 2px solid rgba(255,255,255,0.3);
   padding-bottom: 10px;
 }
 
@@ -66,10 +63,11 @@ h1, h2 {
 section {
   padding: 40px 20px;
   max-width: 1000px;
-  margin: auto;
-  background: white;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
   border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Кнопки */
@@ -88,17 +86,17 @@ button:hover, .button:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Контакты и ссылки */
+/* Ссылки */
 a {
-  color: #0056b3;
+  color: #ffffff;
 }
 
 a:hover {
-  color: #003366;
+  color: #ffd700;
   text-decoration: underline;
 }
 
-/* Мобильная версия */
+/* Адаптивность */
 @media screen and (max-width: 768px) {
   nav {
     flex-direction: column;
