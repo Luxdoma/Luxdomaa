@@ -1,5 +1,7 @@
 /* Сброс стилей */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,10 +12,13 @@ html {
 }
 
 body {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   background-color: #ffffff;
   color: #333;
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Контейнер */
@@ -21,6 +26,7 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 /* Header */
@@ -44,12 +50,17 @@ body {
   height: auto;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+}
+
 .nav a {
   margin-left: 20px;
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .nav a:hover {
@@ -76,6 +87,7 @@ body {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
 }
 
 .hero-content {
@@ -101,7 +113,7 @@ body {
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
 }
 
 .hero-button:hover {
@@ -110,7 +122,7 @@ body {
 
 /* About Section */
 .about {
-  padding: 80px 0;
+  padding: 80px 20px;
   text-align: center;
 }
 
@@ -123,11 +135,12 @@ body {
   font-size: 18px;
   max-width: 800px;
   margin: 0 auto;
+  color: #666;
 }
 
-/* Gallery Sections */
+/* Gallery Section */
 .gallery {
-  padding: 80px 0;
+  padding: 80px 20px;
 }
 
 .gallery h2 {
@@ -145,15 +158,16 @@ body {
 .gallery-grid figure {
   overflow: hidden;
   border-radius: 15px;
-  transition: transform 0.3s;
   background: #fafafa;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
 .gallery-grid figure img {
   width: 100%;
   height: auto;
   display: block;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .gallery-grid figure:hover img {
@@ -165,16 +179,17 @@ body {
   padding: 15px 10px;
   font-weight: 500;
   background: #fff;
+  font-size: 16px;
 }
 
-/* Общие стили для новых секций */
+/* Visa & Business Section */
 .visa, .business {
   padding: 80px 20px;
   background-color: #f8f8f8;
+  text-align: center;
 }
 
 .visa h2, .business h2 {
-  text-align: center;
   font-size: 36px;
   margin-bottom: 20px;
   color: #333;
@@ -186,13 +201,12 @@ body {
   font-size: 18px;
   line-height: 1.6;
   color: #555;
-  text-align: center;
 }
 
-/* Services Section (wrapped cards) */
+/* Services Section */
 .services {
   background-color: #f9f9f9;
-  padding: 80px 0;
+  padding: 80px 20px;
 }
 
 .services h2 {
@@ -214,7 +228,7 @@ body {
   border-radius: 15px;
   text-align: center;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .service-card i {
@@ -239,7 +253,7 @@ body {
 
 /* Contact Section */
 .contact {
-  padding: 80px 0;
+  padding: 80px 20px;
   text-align: center;
 }
 
@@ -262,6 +276,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 10px;
   font-size: 16px;
+  resize: vertical;
 }
 
 .contact-form textarea {
@@ -272,11 +287,12 @@ body {
   background-color: #c8a750;
   color: #fff;
   border: none;
-  padding: 15px;
+  padding: 15px 30px;
   border-radius: 30px;
   font-size: 18px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
 }
 
 .button:hover {
@@ -290,4 +306,16 @@ body {
   padding: 30px 0;
   text-align: center;
   font-size: 14px;
+  margin-top: auto;
+}
+
+/* Дополнительные улучшения */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  transition: color 0.3s ease, background 0.3s ease;
 }
