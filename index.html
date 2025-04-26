@@ -3,77 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Премиальные Виллы</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css"> <!-- подключи свой css файл -->
+  <meta name="description" content="Премиальные виллы, эксклюзивная недвижимость, готовые решения для инвесторов и туризм.">
+  <meta name="keywords" content="виллы, роскошь, инвестиции, недвижимость, премиум жилье, Турция, Дубай">
+  <meta name="author" content="Премиальные Виллы">
+  <title>Премиальные Виллы | Роскошь и Инвестиции</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css"> <!-- подключи свой CSS -->
 </head>
 <body>
 
   <!-- Header -->
   <header class="header">
     <div class="container header-container">
-      <img src="images/Logo.jpg" alt="Логотип" class="logo">
+      <a href="#home" class="logo-link">
+        <img src="images/Logo.jpg" alt="Логотип Премиальные Виллы" class="logo">
+      </a>
       <nav class="nav">
-        <a href="#home">Главная</a>
-        <a href="#about">О нас</a>
-        <a href="#villas">Виллы</a>
-        <a href="#kitchens">Кухни</a>
-        <a href="#services">Услуги</a>
-        <a href="#contact">Контакты</a>
-        <a href="#visa">Туризм</a>
-        <a href="#business">Готовый бизнес</a>
+        <ul class="nav-list">
+          <li><a href="#home">Главная</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#villas">Виллы</a></li>
+          <li><a href="#kitchens">Кухни</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#visa">Туризм</a></li>
+          <li><a href="#business">Бизнес</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Добро пожаловать в мир роскоши</h1>
-      <p>Эксклюзивные виллы для тех, кто ценит лучшее</p>
-      <a href="#villas" class="hero-button">Смотреть Виллы</a>
+    <div class="container hero-content">
+      <h1 class="hero-title">Добро пожаловать в мир роскоши</h1>
+      <p class="hero-subtitle">Эксклюзивные виллы для тех, кто ценит лучшее</p>
+      <a href="#villas" class="btn hero-btn">Смотреть Виллы</a>
     </div>
   </section>
 
-  <!-- Visa and Tourism Section -->
-  <section id="visa" class="visa">
+  <!-- Visa Section -->
+  <section id="visa" class="visa-section">
     <div class="container">
-      <h2>Визовая поддержка и туризм</h2>
-      <p>Мы поможем вам с оформлением виз, организацией перелёта, трансфера и досуга. Отели, экскурсии, аренда авто — всё под ключ.</p>
+      <h2 class="section-title">Визовая поддержка и туризм</h2>
+      <p class="section-description">
+        Мы поможем вам с оформлением виз, организацией перелёта, трансфера и досуга. Отели, экскурсии, аренда авто — всё под ключ.
+      </p>
     </div>
   </section>
 
-  <!-- Ready Business Section -->
-  <section id="business" class="business">
+  <!-- Business Section -->
+  <section id="business" class="business-section">
     <div class="container">
-      <h2>Готовый бизнес</h2>
-      <p>Мы предлагаем готовые решения для инвесторов: от апартаментов под аренду до действующих объектов. Высокая доходность, надёжное сопровождение.</p>
+      <h2 class="section-title">Готовый бизнес</h2>
+      <p class="section-description">
+        Мы предлагаем готовые решения для инвесторов: от апартаментов под аренду до действующих объектов. Высокая доходность, надёжное сопровождение.
+      </p>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="about">
+  <section id="about" class="about-section">
     <div class="container">
-      <h2>О нас</h2>
-      <p>Мы создаём уникальные пространства, которые сочетают в себе комфорт, стиль и передовые технологии. Наши виллы — воплощение утонченности и безупречного вкуса.</p>
+      <h2 class="section-title">О нас</h2>
+      <p class="section-description">
+        Мы создаём уникальные пространства, сочетающие комфорт, стиль и технологии. Наши виллы — воплощение утонченности и безупречного вкуса.
+      </p>
     </div>
   </section>
 
   <!-- Villas Gallery -->
-  <section id="villas" class="gallery">
+  <section id="villas" class="gallery-section villas-gallery">
     <div class="container">
-      <h2>Наши Виллы</h2>
+      <h2 class="section-title">Наши Виллы</h2>
       <div class="gallery-grid">
-        <figure>
-          <img src="images/villa1.jpg" alt="Вилла 1">
+        <figure class="gallery-item">
+          <img src="images/villa1.jpg" alt="Вилла на побережье" class="gallery-image">
           <figcaption>Вилла на побережье</figcaption>
         </figure>
-        <figure>
-          <img src="images/villa2.jpg" alt="Вилла 2">
+        <figure class="gallery-item">
+          <img src="images/villa2.jpg" alt="Современная резиденция" class="gallery-image">
           <figcaption>Современная резиденция</figcaption>
         </figure>
-        <figure>
-          <img src="images/villa3.jpg" alt="Вилла 3">
+        <figure class="gallery-item">
+          <img src="images/villa3.jpg" alt="Роскошная усадьба" class="gallery-image">
           <figcaption>Роскошная усадьба</figcaption>
         </figure>
       </div>
@@ -81,16 +95,16 @@
   </section>
 
   <!-- Kitchens Gallery -->
-  <section id="kitchens" class="gallery kitchens">
+  <section id="kitchens" class="gallery-section kitchens-gallery">
     <div class="container">
-      <h2>Изысканные Кухни</h2>
+      <h2 class="section-title">Изысканные Кухни</h2>
       <div class="gallery-grid">
-        <figure>
-          <img src="images/kitchen1.jpg" alt="Кухня 1">
+        <figure class="gallery-item">
+          <img src="images/kitchen1.jpg" alt="Стильная кухня" class="gallery-image">
           <figcaption>Стильная кухня</figcaption>
         </figure>
-        <figure>
-          <img src="images/kitchen2.jpg" alt="Кухня 2">
+        <figure class="gallery-item">
+          <img src="images/kitchen2.jpg" alt="Минимализм и удобство" class="gallery-image">
           <figcaption>Минимализм и удобство</figcaption>
         </figure>
       </div>
@@ -98,43 +112,43 @@
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="services">
+  <section id="services" class="services-section">
     <div class="container">
-      <h2>Наши Услуги</h2>
+      <h2 class="section-title">Наши Услуги</h2>
       <div class="services-grid">
         <div class="service-card">
-          <i class="fas fa-paint-brush"></i>
-          <h3>Персональный Дизайн</h3>
-          <p>Мы подберем уникальный интерьер для каждого клиента, учитывая все его пожелания и предпочтения.</p>
+          <i class="fas fa-paint-brush service-icon"></i>
+          <h3 class="service-title">Персональный Дизайн</h3>
+          <p class="service-description">Уникальный интерьер для каждого клиента с учётом всех предпочтений.</p>
         </div>
         <div class="service-card">
-          <i class="fas fa-house-user"></i>
-          <h3>Управление Недвижимостью</h3>
-          <p>Полный сервис: от аренды до ухода за вашей виллой — чтобы вы наслаждались каждой минутой.</p>
+          <i class="fas fa-house-user service-icon"></i>
+          <h3 class="service-title">Управление Недвижимостью</h3>
+          <p class="service-description">Полный сервис: аренда, уход, эксплуатация вашей недвижимости.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="contact">
+  <section id="contact" class="contact-section">
     <div class="container">
-      <h2>Связаться с нами</h2>
-      <form class="contact-form">
-        <input type="text" name="name" placeholder="Ваше имя" required>
-        <input type="email" name="email" placeholder="Ваш Email" required>
-        <textarea name="message" placeholder="Ваше сообщение" required></textarea>
-        <button type="submit" class="button">Отправить</button>
+      <h2 class="section-title">Связаться с нами</h2>
+      <form class="contact-form" action="send.php" method="post">
+        <input type="text" name="name" placeholder="Ваше имя" required class="form-input">
+        <input type="email" name="email" placeholder="Ваш Email" required class="form-input">
+        <textarea name="message" placeholder="Ваше сообщение" required class="form-textarea"></textarea>
+        <button type="submit" class="btn form-btn">Отправить</button>
       </form>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
+    <div class="container footer-container">
       <p>&copy; 2025 Премиальные Виллы. Все права защищены.</p>
     </div>
   </footer>
 
 </body>
-</html>
+            </html>
