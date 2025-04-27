@@ -3,246 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LuxDoma — Элитные Виллы</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Сброс стилей */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #222;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        header {
-            background: #ffffff;
-            padding: 20px 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid #ddd;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            transition: background 0.3s ease;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            height: 50px;
-            margin-right: 10px;
-        }
-
-        nav a {
-            color: #222;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: 600;
-            font-size: 16px;
-            position: relative;
-            transition: color 0.3s ease;
-        }
-
-        nav a::after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 2px;
-            background: #0077cc;
-            transition: width .3s;
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-        }
-
-        nav a:hover {
-            color: #0077cc;
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 20px;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-
-        .container.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        h1, h2 {
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-
-        h1 {
-            font-size: 42px;
-            color: #002244;
-            text-align: center;
-        }
-
-        h2 {
-            font-size: 32px;
-            color: #004488;
-        }
-
-        p {
-            font-size: 18px;
-        }
-
-        .intro, .services, .about, .villas {
-            margin-bottom: 80px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #0077cc;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 30px;
-            margin-top: 20px;
-            font-size: 16px;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #005fa3;
-            transform: scale(1.05);
-        }
-
-        .villa-photo {
-            width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-            margin-top: 30px;
-            transition: transform 0.4s ease;
-        }
-
-        .villa-photo:hover {
-            transform: scale(1.03);
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #111;
-            color: #bbb;
-            font-size: 14px;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 15px 20px;
-            }
-
-            nav {
-                margin-top: 10px;
-                display: flex;
-                flex-wrap: wrap;
-            }
-
-            nav a {
-                margin: 10px 10px 0 0;
-            }
-
-            h1 {
-                font-size: 34px;
-            }
-
-            h2 {
-                font-size: 26px;
-            }
-        }
-    </style>
+    <title>Mersel Prime — Премиальные услуги</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
 </head>
 <body>
 
-<header>
-    <div class="logo">
-        <img src="https://via.placeholder.com/50" alt="LuxDoma">
-        <span style="font-size: 26px; font-weight: bold;">LuxDoma</span>
-    </div>
-    <nav>
-        <a href="#about">О нас</a>
-        <a href="#services">Услуги</a>
-        <a href="#villas">Виллы</a>
-        <a href="#contacts">Контакты</a>
-    </nav>
-</header>
+    <header class="header">
+        <div class="container">
+            <div class="logo">Mersel Prime</div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+                <select id="languageSwitcher">
+                    <option value="ru">RU</option>
+                    <option value="en">EN</option>
+                    <option value="tm">TM</option>
+                    <option value="zh">中文</option>
+                    <option value="es">ES</option>
+                    <option value="fr">FR</option>
+                    <option value="de">DE</option>
+                    <option value="ja">JP</option>
+                    <option value="it">IT</option>
+                </select>
+            </nav>
+            <a href="#booking" class="btn-primary">Бронировать</a>
+        </div>
+    </header>
 
-<div class="container" id="home">
-    <section class="intro">
-        <h1>Добро пожаловать в мир роскоши</h1>
-        <p>Эксклюзивные виллы для тех, кто ценит лучшее. Погрузитесь в атмосферу уюта, элегантности и уединения вместе с LuxDoma.</p>
-        <a href="#villas" class="btn">Посмотреть виллы</a>
+    <section class="hero">
+        <div class="container">
+            <h1>Добро пожаловать в Mersel Prime</h1>
+            <p>Откройте для себя новые возможности с нашей командой профессионалов</p>
+            <a href="#booking" class="btn-primary big">Бронировать сейчас</a>
+        </div>
     </section>
 
     <section id="services" class="services">
-        <h2>Визовая поддержка и туризм</h2>
-        <p>Организуем процесс от оформления виз до бронирования лучших отелей, аренды автомобилей и составления культурных программ.</p>
-    </section>
-
-    <section class="services">
-        <h2>Готовый бизнес под ключ</h2>
-        <p>Мы предлагаем действующие бизнесы в сфере недвижимости и туризма с высоким уровнем доходности и полным сопровождением сделки.</p>
+        <div class="container">
+            <h2>Наши Услуги</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <img src="images/visa.jpg" alt="Визовая поддержка">
+                    <h3>Визовая поддержка</h3>
+                </div>
+                <div class="service-item">
+                    <img src="images/realestate.jpg" alt="Риелторские услуги">
+                    <h3>Недвижимость</h3>
+                </div>
+                <div class="service-item">
+                    <img src="images/travel.jpg" alt="Туризм">
+                    <h3>Туризм</h3>
+                </div>
+                <div class="service-item">
+                    <img src="images/business.jpg" alt="Готовый бизнес">
+                    <h3>Готовый бизнес</h3>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="about" class="about">
-        <h2>О компании</h2>
-        <p>LuxDoma — это команда экспертов в сфере премиальной недвижимости. Мы объединяем лучшее: качество, стиль и технологии, чтобы создавать идеальные условия для жизни и инвестиций.</p>
+        <div class="container">
+            <h2>О компании Mersel Prime</h2>
+            <p>Мы предлагаем премиальные решения для тех, кто ценит качество, профессионализм и глобальные возможности. Ваш успех — наша миссия.</p>
+        </div>
     </section>
 
-    <section id="villas" class="villas">
-        <h2>Каталог вилл</h2>
-        <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGhvdXNlfGVufDB8fHx8MTY1MDI2ODc0Mw&ixlib=rb-1.2.1&q=80&w=1200" alt="Элитная Вилла" class="villa-photo">
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Связаться с нами</h2>
+            <form>
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="email" placeholder="Ваш email" required>
+                <textarea placeholder="Ваше сообщение" required></textarea>
+                <button type="submit" class="btn-primary">Отправить</button>
+            </form>
+        </div>
     </section>
-</div>
 
-<footer id="contacts">
-    <p>&copy; 2025 LuxDoma. Все права защищены.</p>
-</footer>
-
-<script>
-    // Анимация появления секций при прокрутке
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, {
-        threshold: 0.2
-    });
-
-    document.querySelectorAll('.container').forEach(section => {
-        observer.observe(section);
-    });
-</script>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Mersel Prime. Все права защищены.</p>
+            <div class="socials">
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Facebook</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
